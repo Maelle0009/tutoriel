@@ -1,0 +1,24 @@
+---
+title: "R Notebook"
+output: github_document
+---
+
+```{bash}
+mkdir data
+```
+
+```{r}
+
+download.file(url = "https://mothur.s3.us-east-2.amazonaws.com/wiki/miseqsopdata.zip", destfile = "/home/rstudio/tutoriel_dada2/tutoriel/data/miseqsopdata.zip")
+```
+
+```{bash}
+unzip /home/rstudio/tutoriel_dada2/tutoriel/data/miseqsopdata.zip
+```
+
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("dada2", version = "3.23")
+```
+
